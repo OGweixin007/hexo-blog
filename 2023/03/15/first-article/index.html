@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析 -  Hexo</title>
+		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+		<!-- lazyload -->
+		<script src="https://unpkg.com/lazysizes@5.1.0/lazysizes.min.js"></script>
+		<!-- smooth-scrolling -->
+		<script src="https://unpkg.com/smooth-scrolling.js@latest"></script>
+		<!-- highlight -->
+		<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark.min.css" />
+		<script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+		<!-- 预置 kiraicon -->
+		<link rel="stylesheet" href="/lib/iconfont/iconfont.css" crossorigin />
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3299330_2a7ov96q7e3.css" crossorigin />
+		
+		<link rel="stylesheet" href="/lib/iconfont/iconfont.css" crossorigin />
+		<link
+			rel="shortcut icon"
+			href="https://panjiachen.github.io/vue-element-admin-site/favicon.ico"
+			type="image/png"
+		/>
+		<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+		
+			
+		<link rel="stylesheet" href="/style.css" />
+			
+		<link rel="stylesheet" href="/custom.css" />
+			
+		
+		<script src="/deps/js/APlayer.min.js"></script>
+		<script src="/deps/js/Meting.min.js"></script>
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://w.wallhaven.cc/full/p9/wallhaven-p9op59.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Hexo">
+        <img
+			src="https://p3-passport.byteimg.com/img/user-avatar/8f0b681a50ca4cd68611282e297d6edf~190x190.awebp"
+			alt="John Doe"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://p3-passport.byteimg.com/img/user-avatar/8f0b681a50ca4cd68611282e297d6edf~190x190.awebp" title="John Doe">
+			<img
+				src="https://p3-passport.byteimg.com/img/user-avatar/8f0b681a50ca4cd68611282e297d6edf~190x190.awebp"
+				alt="John Doe"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>3</div>
+		<div><span>标签</span>0</div>
+		<div><span>分类</span>0</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont icon-home"
+			></i>
+			<div class="kira-list-item-content">回到首页</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont icon-container"
+			></i>
+			<div class="kira-list-item-content">文章归档</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont icon-user"
+			></i>
+			<div class="kira-list-item-content">关于本人</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont icon-team"
+			></i>
+			<div class="kira-list-item-content">我的朋友</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		 <div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		<a
+			class="mdui-ripple"
+			href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1113814294&website=www.oicqzone.com"
+			target="_blank"
+			mdui-tooltip="{content: 'QQ'}"
+			style="
+				color: rgb(49, 174, 255);
+				background-color: rgba(49, 174, 255, .1);
+			"
+		>
+			<i
+				class="kirafont icon-QQ"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/274276224"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .15);
+			"
+		>
+			<i
+				class="kirafont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/ogweixin007"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .15);
+			"
+		>
+			<i
+				class="kirafont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://gitee.com/ogweixin_007"
+			target="_blank"
+			mdui-tooltip="{content: 'Gitee'}"
+			style="
+				color: rgb(165, 15, 15);
+				background-color: rgba(165, 15, 15, .15);
+			"
+		>
+			<i
+				class="kirafont icon-gitee"
+			></i> </a
+		>
+	</div>
+</div>
+    
+ 
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2023
+		<a href="/">John Doe</a
+		>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<!-- TODO: github 链接 -->
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div class="kira-sidebar-modal" id="sidebar-modal" onclick="(function(self) {
+	self.classList.remove('show');
+	document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+})(this)"></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+<script src="/js/kira-image.js"></script>
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="kira-post">
+	<article>
+		
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
+			<img
+				data-src="https://w.wallhaven.cc/full/p9/wallhaven-p9op59.jpg"
+				data-sizes="auto"
+				alt="最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年03月15日</a>
+			<a><i class="kirafont icon-areachart"></i>7k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 34 分钟</a>
+		</div>
+		<p>如果你和我一样是小白，那么恭喜你！</p>
+<p>看完这篇文章，你也可以拥有一个这样的博客啦！</p>
+<p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711da3caea465f~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image"></p>
+<h3><span id="前言">前言</span></h3><ol>
+<li>欢迎在文末留言，或者点击加入<a target="_blank" rel="noopener" href="https://dwz.cn/Fdk9LftN" title="https://dwz.cn/Fdk9LftN">QQ群933583982</a>互相交流。</li>
+<li>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处！</li>
+<li>【持续更新】链接：<a target="_blank" rel="noopener" href="https://www.simon96.online/2018/10/12/hexo-tutorial/" title="https://www.simon96.online/2018/10/12/hexo-tutorial/">www.simon96.online/2018/10/12/…</a></li>
+</ol>
+<h3><span id="博客搭建">博客搭建</span></h3><h4><span id="准备环境">准备环境</span></h4><ol>
+<li><p><a target="_blank" rel="noopener" href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a> 下载，并安装。详细步骤：<a target="_blank" rel="noopener" href="https://www.simon96.online/2018/11/10/hexo-env/" title="https://www.simon96.online/2018/11/10/hexo-env/">www.simon96.online/2018/11/10/…</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://git-scm.com/" title="http://git-scm.com/">Git</a> 下载，并安装。详细步骤：<a target="_blank" rel="noopener" href="https://www.simon96.online/2018/11/10/hexo-env/" title="https://www.simon96.online/2018/11/10/hexo-env/">www.simon96.online/2018/11/10/…</a></p>
+</li>
+<li><p>安装Hexo，在命令行（即Git Bash）运行以下命令：</p>
+<blockquote>
+<p>npm install -g hexo-cli</p>
+</blockquote>
+</li>
+<li><p>初始化Hexo，在命令行（即Git Bash）依次运行以下命令即可：</p>
+<p>以下，即存放Hexo初始化文件的路径， 即站点目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">hexo init &lt;folder&gt;</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">cd</span> &lt;folder&gt;</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">npm install</span><br></code></pre></td></tr></table></figure>
+
+<p>新建完成后，在路径下，会产生这些文件和文件夹：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">.<br>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── <span class="hljs-built_in">source</span><br>|   ├── _drafts<br>|   └── _posts<br>└── themes<br></code></pre></td></tr></table></figure>
+
+<p><strong>注</strong>：</p>
+<ul>
+<li><p>hexo相关命令均在<strong>站点目录</strong>下，用<strong>Git Bash</strong>运行。</p>
+</li>
+<li><p>站点配置文件：站点目录下的<code>_config.yml</code>。</p>
+<p>​ 路径为<code>&lt;folder&gt;\_config.yml</code></p>
+</li>
+<li><p>主题配置文件：站点目录下的<code>themes</code>文件夹下的，主题文件夹下的<code>_config.yml</code>。</p>
+<p>​ 路径为<code>&lt;folder&gt;\themes\&lt;主题文件夹&gt;\_config.yml</code></p>
+</li>
+</ul>
+</li>
+<li><p>启动服务器。在路径下，命令行（即Git Bash）输入以下命令，运行即可：</p>
+<blockquote>
+<p>hexo server</p>
+</blockquote>
+</li>
+<li><p>浏览器访问网址： <code>http://localhost:4000/</code></p>
+</li>
+</ol>
+<p>至此，您的Hexo博客已经搭建在本地。</p>
+<h4><span id="实施方案">实施方案</span></h4><h5><span id="方案一githubpages">方案一：GithubPages</span></h5><ol>
+<li><p>创建<a target="_blank" rel="noopener" href="https://github.com/" title="https://github.com">Github</a>账号</p>
+</li>
+<li><p>创建仓库， 仓库名为：&lt;Github账号名称&gt;.github.io</p>
+</li>
+<li><p>将本地Hexo博客推送到GithubPages</p>
+<p>3.1. 安装<code>hexo-deployer-git</code>插件。在命令行（即Git Bash）运行以下命令即可：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">$ npm install hexo-deployer-git <span class="hljs-attr">--save</span><br></code></pre></td></tr></table></figure>
+
+<p>3.2. 添加SSH key。</p>
+<ul>
+<li><p>创建一个 SSH key 。在命令行（即Git Bash）输入以下命令， 回车三下即可：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>ssh-keygen -t rsa -C <span class="hljs-string">&quot;邮箱地址&quot;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>添加到 github。 复制密钥文件内容（路径形如<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>），粘贴到<a target="_blank" rel="noopener" href="https://github.com/settings/keys" title="https://github.com/settings/keys">New SSH Key</a>即可。</p>
+</li>
+<li><p>测试是否添加成功。在命令行（即Git Bash）依次输入以下命令，返回“You’ve successfully authenticated”即成功：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>ssh -T git<span class="hljs-variable">@github</span>.com<br><span class="hljs-variable">$ </span>yes<br></code></pre></td></tr></table></figure></li>
+</ul>
+<p>3.3. 修改<code>_config.yml</code>（在站点目录下）。文件末尾修改为：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Deployment</span><br><span class="hljs-comment">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br></code></pre></td></tr></table></figure>
+
+<p>注意：上面仓库地址写ssh地址，不写http地址。</p>
+<p>3.4. 推送到GithubPages。在命令行（即Git Bash）依次输入以下命令， 返回<code>INFO Deploy done: git</code>即成功推送：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>hexo g<br><span class="hljs-variable">$ </span>hexo d<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>等待1分钟左右，浏览器访问网址： <code>https://&lt;Github账号名称&gt;.github.io</code></p>
+</li>
+</ol>
+<p>至此，您的Hexo博客已经搭建在GithubPages, 域名为<code>https://&lt;Github账号名称&gt;.github.io</code>。</p>
+<h5><span id="方案二githubpages-域名">方案二：GithubPages + 域名</span></h5><p>在方案一的基础上，添加自定义域名（您购买的域名）。</p>
+<ol>
+<li><p>域名解析。</p>
+<p>类型选择为 CNAME；</p>
+<p>主机记录即域名前缀，填写为www；</p>
+<p>记录值填写为自定义域名；</p>
+<p>解析线路，TTL 默认即可。</p>
+</li>
+<li><p>仓库设置。</p>
+<p>2.1. 打开博客仓库设置：<code>https://github.com/&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io/settings</code></p>
+<p>2.2. 在Custom domain下，填写自定义域名，点击<code>save</code>。</p>
+<p>2.3. 在站点目录的<code>source</code>文件夹下，创建并打开<code>CNAME.txt</code>，写入你的域名（如<code>www.simon96.online</code>），保存，并重命名为<code>CNAME</code>。</p>
+</li>
+<li><p>等待10分钟左右。</p>
+<p>浏览器访问自定义域名。</p>
+<p>至此，您的Hexo博客已经解析到自定义域名，<code>https://&lt;Github账号名称&gt;.github.io</code>依然可用。</p>
+</li>
+</ol>
+<h5><span id="方案三githubpages-codingpages-域名">方案三：GithubPages + CodingPages + 域名</span></h5><p>GithubPages 在国内较慢，百度不收录，而CodingPages 在国外较快。所以在方案二的基础上，添加CodingPages 。</p>
+<ol>
+<li><p>创建<a target="_blank" rel="noopener" href="https://coding.net/" title="https://coding.net/">Coding</a>账号</p>
+</li>
+<li><p>创建仓库， 仓库名为：&lt;Coding账号名称&gt;</p>
+</li>
+<li><p>进入项目里『代码』页面，点击『一键开启静态 Pages』，稍等片刻CodingPages即可部署成功。</p>
+</li>
+<li><p>将本地Hexo博客推送到CodingPages</p>
+<p>4.1. 鉴于创建GithubPages 时，已经生成过公钥。可直接复制密钥文件内容（路径形如<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>）， 粘贴到<a target="_blank" rel="noopener" href="https://dev.tencent.com/user/account/setting/keys" title="https://dev.tencent.com/user/account/setting/keys">新增公钥</a>。</p>
+<p>4.2. 测试是否添加成功。在命令行（即Git Bash）依次输入以下命令，返回“You’ve successfully authenticated”即成功：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>ssh -T git<span class="hljs-variable">@git</span>.coding.net<br><span class="hljs-variable">$ </span>yes<br></code></pre></td></tr></table></figure>
+
+<p>4.3. 修改<code>_config.yml</code>（在存放Hexo初始化文件的路径下）。文件末尾修改为：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Deployment</span><br><span class="hljs-comment">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="hljs-attr">deploy:</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:&lt;Github账号名称&gt;/&lt;Github账号名称&gt;.github.io.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">git@git.dev.tencent.com:&lt;Coding账号名称&gt;/&lt;Coding账号名称&gt;.git</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">master</span><br></code></pre></td></tr></table></figure>
+
+<p>4.4. 推送到GithubPages。在命令行（即Git Bash）依次输入以下命令， 返回<code>INFO Deploy done: git</code>即成功推送：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>hexo g<br><span class="hljs-variable">$ </span>hexo d<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>域名解析</p>
+<ol>
+<li><p>添加 CNAME 记录指向 &lt;Coding账号名称&gt;.coding.me</p>
+<p>类型选择为 CNAME；</p>
+<p>主机记录即域名前缀，填写为www；</p>
+<p>记录值填写为自定义域名；</p>
+<p>解析线路，TTL 默认即可。</p>
+</li>
+<li><p>添加 两条A 记录指向 192.30.252.153和192.30.252.154</p>
+<p>类型选择为 A；</p>
+<p>主机记录即域名前缀，填写为@；</p>
+<p>记录值填写为192.30.252.153和192.30.252.154；</p>
+<p>解析线路，境外或谷歌。</p>
+</li>
+<li><p>在『Pages 服务』设置页（<code>https://dev.tencent.com/u/&lt;Coding账号名称&gt;/p/&lt;Coding账号名称&gt;/git/pages/settings</code>）中绑定自定义域名。</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>至此，您的Hexo博客已经解析到自定义域名，<code>https://&lt;Github账号名称&gt;.github.io</code>和<code>https://&lt;Coding账号名称&gt;.coding.me</code>依然可用。</p>
+<h5><span id="方案四云服务器-域名">方案四：云服务器 + 域名</span></h5><p>该方案需要先购买云服务器和域名。</p>
+<ol>
+<li><p>在云服务器安装Git 和 Nginx。(Git 用于版本管理和部署，Nginx 用于静态博客托管。)</p>
+<p>登陆root用户，运行：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>yum -y update<br><span class="hljs-variable">$ </span>yum install -y git nginx<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>Nginx配置</p>
+<p>2.1. 创建文件目录(用于博客站点文件存放)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local/<br><span class="hljs-built_in">mkdir</span> hexo<br><span class="hljs-built_in">chmod</span> 775 -R /usr/local/hexo/<br></code></pre></td></tr></table></figure>
+
+<p>2.2. 添加 index.html(用于检测配置 Nginx 是否成功)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /usr/local/hexo/index.html<br></code></pre></td></tr></table></figure>
+
+<p>添加以下代码，并保存。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Nginx running<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>2.3. 配置 Nginx 服务器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /etc/nginx/nginx.conf<br></code></pre></td></tr></table></figure>
+
+<p>修改server_name和root：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs ini">server &#123;<br>      listen       80 default_server<span class="hljs-comment">;</span><br>      listen       <span class="hljs-section">[::]</span>:80 default_server<span class="hljs-comment">;</span><br>      server_name  www.baidu.com<span class="hljs-comment">; # 填个人域名      </span><br>      root         /usr/local/hexo/<span class="hljs-comment">;</span><br>  &#125;      <br></code></pre></td></tr></table></figure>
+
+<p>2.4. 启动nginx服务；</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">service nginx <span class="hljs-keyword">start</span><br></code></pre></td></tr></table></figure>
+
+<p>2.5. 云服务器浏览器访问个人域名或IP，若跳转index.html，则配置完成，否则检查以上配置。</p>
+</li>
+<li><p>git配置</p>
+<p>3.1. 创建文件目录, 用于私人 Git 仓库搭建, 并更改目录读写权限。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /usr/local/<br><span class="hljs-built_in">mkdir</span> hexoRepo<br><span class="hljs-built_in">chmod</span> 775 -R /usr/local/hexoRepo/<br></code></pre></td></tr></table></figure>
+
+<p>3.2. Git 初始化裸库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> hexoRepo/<br>git init --bare hexo.git<br></code></pre></td></tr></table></figure>
+
+<p>3.3. 创建 Git 钩子(hook)。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim /usr/local/hexoRepo/hexo.git/hooks/post-receive<br></code></pre></td></tr></table></figure>
+
+<p>3.4. 输入以下信息，用于指定 Git 的源代码 和 Git 配置文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br>git --work-tree=/usr/local/hexo --git-dir=/usr/local/hexoRepo/hexo.git checkout -f<br></code></pre></td></tr></table></figure>
+
+<p>3.5. 保存并退出后, 给该文件添加可执行权限。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> +x /usr/local/hexoRepo/hexo.git/hooks/post-receive<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>本地博客推送到云服务器</p>
+<p>4.1. 安装<code>hexo-deployer-git</code>插件。在命令行（即Git Bash）运行以下命令即可：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">$ npm install hexo-deployer-git <span class="hljs-attr">--save</span><br></code></pre></td></tr></table></figure>
+
+<p>4.2. 添加SSH key。</p>
+<ul>
+<li><p>创建一个 SSH key 。在命令行（即Git Bash）输入以下命令， 回车三下即可：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>ssh-keygen -t rsa -C <span class="hljs-string">&quot;邮箱地址&quot;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>添加到 github。 复制密钥文件内容（路径形如<code>C:\Users\Administrator\.ssh\id_rsa.pub</code>），粘贴到<a target="_blank" rel="noopener" href="https://github.com/settings/keys" title="https://github.com/settings/keys">New SSH Key</a>即可。</p>
+</li>
+<li><p>测试是否添加成功。在命令行（即Git Bash）依次输入以下命令，返回“You’ve successfully authenticated”即成功：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>ssh -T git<span class="hljs-variable">@github</span>.com<br><span class="hljs-variable">$ </span>yes<br></code></pre></td></tr></table></figure></li>
+</ul>
+<p>4.3. 修改<code>_config.yml</code>（在站点目录下）。文件末尾修改为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># Deployment</span><br><span class="hljs-comment">## Docs: https://hexo.io/docs/deployment.html</span><br>deploy:<br>  <span class="hljs-built_in">type</span>: git<br>  repo: root@xxx.xxx.xxx.xxx:/usr/local/hexoRepo/hexo  //用户名@域名或 IP 地址:/usr/local/hexoRepo/hexo<br>  branch: master<br></code></pre></td></tr></table></figure>
+
+<p>注意：上面仓库地址写ssh地址，不写http地址。</p>
+<p>4.4. 推送到GithubPages。在命令行（即Git Bash）依次输入以下命令， 返回<code>INFO Deploy done: git</code>即成功推送：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>hexo g<br><span class="hljs-variable">$ </span>hexo d<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>等待1分钟左右，浏览器访问个人域名。</p>
+<p>至此，您的Hexo博客已经搭建在云服务器, 域名为个人域名。</p>
+</li>
+</ol>
+<h3><span id="主题优化">主题优化</span></h3><h4><span id="选择主题">选择主题</span></h4><p>Hexo默认的主题是landscape，推荐以下主题：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://github.com/shenliyang/hexo-theme-snippet#hexo-theme-snippet" title="https://github.com/shenliyang/hexo-theme-snippet#hexo-theme-snippet">snippet</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/iTimeTraveler/hexo-theme-hiero#hiero" title="https://github.com/iTimeTraveler/hexo-theme-hiero#hiero">Hiero</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/tangkunyin/hexo-theme-jsimple#jsimple" title="https://github.com/tangkunyin/hexo-theme-jsimple#jsimple">JSimple</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/chaooo/hexo-theme-BlueLake#bluelake" title="https://github.com/chaooo/hexo-theme-BlueLake#bluelake">BlueLake</a></li>
+</ol>
+<h4><span id="应用主题">应用主题</span></h4><ol>
+<li>下载主题</li>
+<li>将下载好的主题文件夹，粘贴到站点目录的<code>themes</code>下。</li>
+<li>更改站点配置文件<code>_config.yml</code> 的theme字段，为主题文件夹的名称：</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">Extensions</span><br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment"># Plugins: https://hexo.io/plugins/</span></span><br><span class="hljs-meta prompt_">#</span><span class="language-bash"><span class="hljs-comment"># Themes: https://hexo.io/themes/</span></span><br>theme: &lt;主题文件夹的名称&gt;<br></code></pre></td></tr></table></figure>
+
+<h4><span id="主题优化">主题优化</span></h4><p>以上主题都有比较详细的说明文档，本节主要解决主题优化的常见问题。</p>
+<p>主题优化一般包括：</p>
+<ul>
+<li><p><strong>设置「RSS」</strong></p>
+</li>
+<li><p><strong>添加「标签」页面</strong></p>
+</li>
+<li><p><strong>添加「分类」页面</strong></p>
+</li>
+<li><p><strong>设置「字体」</strong></p>
+<p>问题：引用国外字体镜像较慢。</p>
+<p>解决：可以改用国内的。将\themes\*\layout_partials\head <a target="_blank" rel="noopener" href="http://external-fonts.swig文件中fonts.google.com改成fonts.lug.ustc.edu.cn/" title="http://external-fonts.xn--swigfonts-tl6n82exz9i.google.xn--comfonts-rr7pz6w.lug.ustc.edu.cn">external-fonts.swig文件中fonts.google.com改成fonts.lug.ustc.edu.cn</a>。</p>
+</li>
+<li><p><strong>设置「代码高亮主题」</strong></p>
+</li>
+<li><p><strong>侧边栏社交链接</strong></p>
+<p>问题：图标哪里找？</p>
+<p>解决：<a target="_blank" rel="noopener" href="https://fontawesome.com/icons?d=gallery" title="https://fontawesome.com/icons?d=gallery">Font Awesome</a></p>
+</li>
+<li><p><strong>开启打赏功能</strong></p>
+<p>问题：微信支付宝二维码不美观，规格不一。</p>
+<p>解决：<a target="_blank" rel="noopener" href="https://cli.im/weixin" title="https://cli.im/weixin">在线生成二维码</a></p>
+</li>
+<li><p><strong>设置友情链接</strong></p>
+</li>
+<li><p><strong>腾讯公益404页面</strong></p>
+</li>
+<li><p><strong>站点建立时间</strong></p>
+</li>
+<li><p><strong>订阅微信公众号</strong></p>
+</li>
+<li><p><strong>设置「动画效果」</strong></p>
+<p>问题：慢，需要等待 JavaScript 脚本完全加载完毕后才会显示内容。 解决：将主题配置文件<code>_config.yml</code>中，use_motion字段的值设为 <code>false</code> 来关闭动画。</p>
+</li>
+<li><p><strong>设置「背景动画」</strong></p>
+</li>
+</ul>
+<p>主题优化还包括：</p>
+<h5><span id="添加背景图">添加背景图</span></h5><p>在 themes&#x2F;*&#x2F;source&#x2F;css&#x2F;_custom&#x2F;custom.styl 中添加如下代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">body</span>&#123;<br>    <span class="hljs-attribute">background</span>:<span class="hljs-built_in">url</span>(<span class="hljs-string">/images/bg.jpg</span>);<br>    <span class="hljs-attribute">background-size</span>:cover;<br>    <span class="hljs-attribute">background-repeat</span>:no-repeat;<br>    <span class="hljs-attribute">background-attachment</span>:fixed;<br>    <span class="hljs-attribute">background-position</span>:center;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5><span id="修改logo字体">修改Logo字体</span></h5><p>在 <code>themes/*/source/css/_custom/custom.styl</code> 中添加如下代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-keyword">@font-face</span> &#123;<br>    <span class="hljs-attribute">font-family</span>: Zitiming;<br>    <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&#x27;/fonts/Zitiming.ttf&#x27;</span>);<br>&#125;<br><span class="hljs-selector-class">.site-title</span> &#123;<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">40px</span> <span class="hljs-meta">!important</span>;<br>	<span class="hljs-attribute">font-family</span>: <span class="hljs-string">&#x27;Zitiming&#x27;</span> <span class="hljs-meta">!important</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>其中字体文件在 <code>themes/next/source/fonts</code> 目录下，里面有个 <code>.gitkeep</code> 的隐藏文件，打开写入你要保留的字体文件，比如我的是就是写入 <code>Zitiming.ttf</code> ，具体字库自己从网上下载即可。</p>
+<h5><span id="修改内容区域的宽度">修改内容区域的宽度</span></h5><p>编辑主题的 <code>source/css/_variables/custom.styl</code> 文件，新增变量：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ini">// 修改成你期望的宽度<br>$<span class="hljs-attr">content-desktop</span> = <span class="hljs-number">700</span>px<br><br>// 当视窗超过 1600px 后的宽度<br>$<span class="hljs-attr">content-desktop-large</span> = <span class="hljs-number">900</span>px<br></code></pre></td></tr></table></figure>
+
+<h5><span id="网站标题栏背景颜色">网站标题栏背景颜色</span></h5><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-selector-class">.site-meta</span> &#123;<br>  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$blue</span>; <span class="hljs-comment">//修改为自己喜欢的颜色</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5><span id="自定义鼠标样式">自定义鼠标样式</span></h5><p>打开 <code>themes/*/source/css/_custom/custom.styl</code> ,在里面写下如下代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs css">// 鼠标样式<br>  * &#123;<br>      <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&quot;http://om8u46rmb.bkt.clouddn.com/sword2.ico&quot;</span>),auto<span class="hljs-meta">!important</span><br>  &#125;<br>  <span class="hljs-selector-pseudo">:active</span> &#123;<br>      <span class="hljs-attribute">cursor</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&quot;http://om8u46rmb.bkt.clouddn.com/sword1.ico&quot;</span>),auto<span class="hljs-meta">!important</span><br>  &#125;<br></code></pre></td></tr></table></figure>
+
+<h5><span id="文章加密访问">文章加密访问</span></h5><p>打开 <code>themes/*/layout/_partials/head.swig</code>文件,在 <code>&#123;% if theme.pace %&#125;` 标签下的 `&#123;% endif %&#125;</code> 之前插入代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">    (<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;</span><br><span class="language-javascript">        <span class="hljs-keyword">if</span>(<span class="hljs-string">&#x27;&#123;&#123; page.password &#125;&#125;&#x27;</span>)&#123;</span><br><span class="language-javascript">            <span class="hljs-keyword">if</span> (<span class="hljs-title function_">prompt</span>(<span class="hljs-string">&#x27;请输入密码&#x27;</span>) !== <span class="hljs-string">&#x27;&#123;&#123; page.password &#125;&#125;&#x27;</span>)&#123;</span><br><span class="language-javascript">                <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;密码错误&#x27;</span>);</span><br><span class="language-javascript">                history.<span class="hljs-title function_">back</span>();</span><br><span class="language-javascript">            &#125;</span><br><span class="language-javascript">        &#125;</span><br><span class="language-javascript">    &#125;)();</span><br><span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>写文章时加上<code>password: *</code>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-number">2018</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2018-10-25 16:10:03</span><br><span class="hljs-attr">password:</span> <span class="hljs-number">123456</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+
+<h5><span id="实现点击出现桃心效果">实现点击出现桃心效果</span></h5><ol>
+<li>在<code>/themes/*/source/js/src</code>下新建文件<code>click.js</code>，接着把以下粘贴到<code>click.js</code>文件中。 代码如下：</li>
+</ol>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs scss">!<span class="hljs-built_in">function</span>(e,t,a)&#123;function <span class="hljs-built_in">n</span>()&#123;<span class="hljs-built_in">c</span>(&quot;.heart&#123;width: <span class="hljs-number">10px</span>;height: <span class="hljs-number">10px</span>;position: fixed;background: #f00;transform: rotate(<span class="hljs-number">45deg</span>);-webkit-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>);-moz-<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">45deg</span>);&#125;<span class="hljs-selector-class">.heart</span><span class="hljs-selector-pseudo">:after</span>,<span class="hljs-selector-class">.heart</span><span class="hljs-selector-pseudo">:before</span>&#123;<span class="hljs-attribute">content</span>: <span class="hljs-string">&#x27;&#x27;</span>;<span class="hljs-attribute">width</span>: inherit;<span class="hljs-attribute">height</span>: inherit;<span class="hljs-attribute">background</span>: inherit;<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;-webkit-<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;-moz-<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;<span class="hljs-attribute">position</span>: fixed;&#125;<span class="hljs-selector-class">.heart</span><span class="hljs-selector-pseudo">:after</span>&#123;<span class="hljs-attribute">top</span>: -<span class="hljs-number">5px</span>;&#125;<span class="hljs-selector-class">.heart</span><span class="hljs-selector-pseudo">:before</span>&#123;<span class="hljs-attribute">left</span>: -<span class="hljs-number">5px</span>;&#125;&quot;),<span class="hljs-built_in">o</span>(),<span class="hljs-built_in">r</span>()&#125;function <span class="hljs-built_in">r</span>()&#123;<span class="hljs-built_in">for</span>(var e=<span class="hljs-number">0</span>;e&lt;d.length;e++)d<span class="hljs-selector-attr">[e]</span><span class="hljs-selector-class">.alpha</span>&lt;=<span class="hljs-number">0</span>?(t.body.removeChild(d[e].el),d<span class="hljs-selector-class">.splice</span>(e,<span class="hljs-number">1</span>)):(d[e].y--,d[e].scale+=.<span class="hljs-number">004</span>,d[e].alpha-=.<span class="hljs-number">013</span>,d[e].el.style.cssText=<span class="hljs-string">&quot;left:&quot;</span>+d[e].x+<span class="hljs-string">&quot;px;top:&quot;</span>+d[e].y+<span class="hljs-string">&quot;px;opacity:&quot;</span>+d[e].alpha+<span class="hljs-string">&quot;;transform:scale(&quot;</span>+d[e].scale+<span class="hljs-string">&quot;,&quot;</span>+d[e].scale+<span class="hljs-string">&quot;) rotate(45deg);background:&quot;</span>+d[e].color+<span class="hljs-string">&quot;;z-index:99999&quot;</span>);<span class="hljs-built_in">requestAnimationFrame</span>(r)&#125;function <span class="hljs-built_in">o</span>()&#123;<span class="hljs-selector-tag">var</span> t=&quot;function&quot;==typeof e<span class="hljs-selector-class">.onclick</span>&amp;&amp;e<span class="hljs-selector-class">.onclick</span>;e<span class="hljs-selector-class">.onclick</span>=<span class="hljs-built_in">function</span>(e)&#123;t&amp;&amp;<span class="hljs-built_in">t</span>(),<span class="hljs-selector-tag">i</span>(e)&#125;&#125;function <span class="hljs-selector-tag">i</span>(e)&#123;<span class="hljs-selector-tag">var</span> <span class="hljs-selector-tag">a</span>=t<span class="hljs-selector-class">.createElement</span>(&quot;div&quot;);<span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.className</span>=&quot;heart&quot;,d<span class="hljs-selector-class">.push</span>(&#123;el:a,x:e.clientX-<span class="hljs-number">5</span>,y:e.clientY-<span class="hljs-number">5</span>,scale:<span class="hljs-number">1</span>,alpha:<span class="hljs-number">1</span>,color:s()&#125;),t<span class="hljs-selector-class">.body</span><span class="hljs-selector-class">.appendChild</span>(a)&#125;function <span class="hljs-built_in">c</span>(e)&#123;<span class="hljs-selector-tag">var</span> <span class="hljs-selector-tag">a</span>=t<span class="hljs-selector-class">.createElement</span>(&quot;style&quot;);<span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.type</span>=&quot;text/css&quot;;try&#123;<span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.appendChild</span>(t.createTextNode(e))&#125;<span class="hljs-built_in">catch</span>(t)&#123;<span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.styleSheet</span><span class="hljs-selector-class">.cssText</span>=e&#125;t<span class="hljs-selector-class">.getElementsByTagName</span>(&quot;head&quot;)<span class="hljs-selector-attr">[0]</span><span class="hljs-selector-class">.appendChild</span>(a)&#125;function <span class="hljs-built_in">s</span>()&#123;return&quot;<span class="hljs-built_in">rgb</span>(&quot;+~~(<span class="hljs-number">255</span>*Math.random())+&quot;,&quot;+~~(<span class="hljs-number">255</span>*Math.random())+&quot;,&quot;+~~(<span class="hljs-number">255</span>*Math.random())+&quot;)&quot;&#125;<span class="hljs-selector-tag">var</span> d=<span class="hljs-selector-attr">[]</span>;e<span class="hljs-selector-class">.requestAnimationFrame</span>=<span class="hljs-built_in">function</span>()&#123;return e<span class="hljs-selector-class">.requestAnimationFrame</span>||e<span class="hljs-selector-class">.webkitRequestAnimationFrame</span>||e<span class="hljs-selector-class">.mozRequestAnimationFrame</span>||e<span class="hljs-selector-class">.oRequestAnimationFrame</span>||e<span class="hljs-selector-class">.msRequestAnimationFrame</span>||<span class="hljs-built_in">function</span>(e)&#123;<span class="hljs-built_in">setTimeout</span>(e,<span class="hljs-number">1</span>e3/<span class="hljs-number">60</span>)&#125;&#125;(),<span class="hljs-built_in">n</span>()&#125;(window,document);<br><br></code></pre></td></tr></table></figure>
+
+<ol>
+<li>在<code>\themes\*\layout\_layout.swig</code>文件末尾添加：</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/js/src/clicklove.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br></code></pre></td></tr></table></figure>
+
+<h5><span id="静态资源压缩">静态资源压缩</span></h5><p>在站点目录下：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>npm install gulp -g<br></code></pre></td></tr></table></figure>
+
+<p>安装gulp插件：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css">npm install gulp-minify-css <span class="hljs-attr">--save</span><br>npm install gulp-uglify <span class="hljs-attr">--save</span><br>npm install gulp-htmlmin <span class="hljs-attr">--save</span><br>npm install gulp-htmlclean <span class="hljs-attr">--save</span><br>npm install gulp-imagemin <span class="hljs-attr">--save</span><br></code></pre></td></tr></table></figure>
+
+<p>在 <code>Hexo</code> 站点下新建 <code>gulpfile.js</code>文件，文件内容如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;gulp&#x27;</span>);<br><span class="hljs-keyword">var</span> minifycss = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;gulp-minify-css&#x27;</span>);<br><span class="hljs-keyword">var</span> uglify = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;gulp-uglify&#x27;</span>);<br><span class="hljs-keyword">var</span> htmlmin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;gulp-htmlmin&#x27;</span>);<br><span class="hljs-keyword">var</span> htmlclean = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;gulp-htmlclean&#x27;</span>);<br><span class="hljs-keyword">var</span> imagemin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;gulp-imagemin&#x27;</span>);<br><span class="hljs-comment">// 压缩css文件</span><br>gulp.<span class="hljs-title function_">task</span>(<span class="hljs-string">&#x27;minify-css&#x27;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> gulp.<span class="hljs-title function_">src</span>(<span class="hljs-string">&#x27;./public/**/*.css&#x27;</span>)<br>  .<span class="hljs-title function_">pipe</span>(<span class="hljs-title function_">minifycss</span>())<br>  .<span class="hljs-title function_">pipe</span>(gulp.<span class="hljs-title function_">dest</span>(<span class="hljs-string">&#x27;./public&#x27;</span>));<br>&#125;);<br><span class="hljs-comment">// 压缩html文件</span><br>gulp.<span class="hljs-title function_">task</span>(<span class="hljs-string">&#x27;minify-html&#x27;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> gulp.<span class="hljs-title function_">src</span>(<span class="hljs-string">&#x27;./public/**/*.html&#x27;</span>)<br>  .<span class="hljs-title function_">pipe</span>(<span class="hljs-title function_">htmlclean</span>())<br>  .<span class="hljs-title function_">pipe</span>(<span class="hljs-title function_">htmlmin</span>(&#123;<br>    <span class="hljs-attr">removeComments</span>: <span class="hljs-literal">true</span>,<br>    <span class="hljs-attr">minifyJS</span>: <span class="hljs-literal">true</span>,<br>    <span class="hljs-attr">minifyCSS</span>: <span class="hljs-literal">true</span>,<br>    <span class="hljs-attr">minifyURLs</span>: <span class="hljs-literal">true</span>,<br>  &#125;))<br>  .<span class="hljs-title function_">pipe</span>(gulp.<span class="hljs-title function_">dest</span>(<span class="hljs-string">&#x27;./public&#x27;</span>))<br>&#125;);<br><span class="hljs-comment">// 压缩js文件</span><br>gulp.<span class="hljs-title function_">task</span>(<span class="hljs-string">&#x27;minify-js&#x27;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">return</span> gulp.<span class="hljs-title function_">src</span>([<span class="hljs-string">&#x27;./public/**/.js&#x27;</span>,<span class="hljs-string">&#x27;!./public/js/**/*min.js&#x27;</span>])<br>        .<span class="hljs-title function_">pipe</span>(<span class="hljs-title function_">uglify</span>())<br>        .<span class="hljs-title function_">pipe</span>(gulp.<span class="hljs-title function_">dest</span>(<span class="hljs-string">&#x27;./public&#x27;</span>));<br>&#125;);<br><span class="hljs-comment">// 压缩 public/demo 目录内图片</span><br>gulp.<span class="hljs-title function_">task</span>(<span class="hljs-string">&#x27;minify-images&#x27;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>    gulp.<span class="hljs-title function_">src</span>(<span class="hljs-string">&#x27;./public/demo/**/*.*&#x27;</span>)<br>        .<span class="hljs-title function_">pipe</span>(<span class="hljs-title function_">imagemin</span>(&#123;<br>           <span class="hljs-attr">optimizationLevel</span>: <span class="hljs-number">5</span>, <span class="hljs-comment">//类型：Number  默认：3  取值范围：0-7（优化等级）</span><br>           <span class="hljs-attr">progressive</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">//类型：Boolean 默认：false 无损压缩jpg图片</span><br>           <span class="hljs-attr">interlaced</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">//类型：Boolean 默认：false 隔行扫描gif进行渲染</span><br>           <span class="hljs-attr">multipass</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">//类型：Boolean 默认：false 多次优化svg直到完全优化</span><br>        &#125;))<br>        .<span class="hljs-title function_">pipe</span>(gulp.<span class="hljs-title function_">dest</span>(<span class="hljs-string">&#x27;./public/uploads&#x27;</span>));<br>&#125;);<br><span class="hljs-comment">// 默认任务</span><br>gulp.<span class="hljs-title function_">task</span>(<span class="hljs-string">&#x27;default&#x27;</span>, [<br>  <span class="hljs-string">&#x27;minify-html&#x27;</span>,<span class="hljs-string">&#x27;minify-css&#x27;</span>,<span class="hljs-string">&#x27;minify-js&#x27;</span>,<span class="hljs-string">&#x27;minify-images&#x27;</span><br>]);<br></code></pre></td></tr></table></figure>
+
+<p>只需要每次在执行 <code>generate</code> 命令后执行 <code>gulp</code> 就可以实现对静态资源的压缩，压缩完成后执行 <code>deploy</code> 命令同步到服务器：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs auto">hexo g<br>gulp<br>hexo d<br></code></pre></td></tr></table></figure>
+
+<h5><span id="修改访问url路径">修改访问URL路径</span></h5><p>默认情况下访问URL路径为：<code>domain/2018/10/18/关于本站</code>,修改为 <code>domain/About/关于本站</code>。 编辑 <code>Hexo</code> 站点下的 <code>_config.yml</code> 文件，修改其中的 <code>permalink</code>字段：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-symbol">permalink:</span> <span class="hljs-symbol">:category/</span><span class="hljs-symbol">:title/</span><br></code></pre></td></tr></table></figure>
+
+<h5><span id="博文置顶">博文置顶</span></h5><ol>
+<li><p>安装插件</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://juejin.cn/equation?tex=npm%20uninstall%20hexo-generator-index%20--save" alt="npm uninstall hexo-generator-index --save" class="lazyload"> npm install hexo-generator-index-pin-top –save</p>
+</li>
+</ol>
+<p>然后在需要置顶的文章的Front-matter中加上top即可：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-number">2018</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2018-10-25 16:10:03</span><br><span class="hljs-attr">top:</span> <span class="hljs-number">10</span><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br></code></pre></td></tr></table></figure>
+
+<ol>
+<li>设置置顶标志</li>
+</ol>
+<p>打开：&#x2F;themes&#x2F;*&#x2F;layout&#x2F;_macro&#x2F;post.swig，定位到</p>
+<p>，插入以下代码即可：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml">&#123;% if post.top %&#125;<br>  <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-thumb-tack&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">color</span>=<span class="hljs-string">7D26CD</span>&gt;</span>置顶<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;post-meta-divider&quot;</span>&gt;</span>|<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>&#123;% endif %&#125;<br><br></code></pre></td></tr></table></figure>
+
+<h5><span id="在右上角或者左上角实现fork-me-on-github">在右上角或者左上角实现fork me on github</span></h5><ol>
+<li>选择样式<a target="_blank" rel="noopener" href="https://blog.github.com/2008-12-19-github-ribbons/" title="https://blog.github.com/2008-12-19-github-ribbons/">GitHub Ribbons</a>,</li>
+<li>修改图片跳转链接,将<code>&lt;a href=&quot;https://github.com/you&quot;&gt;</code>中的链接换为自己Github链接：</li>
+<li>打开 <code>themes/next/layout/_layout.swig</code> 文件，把代码复制到<code>&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;</code>下面。</li>
+</ol>
+<h5><span id="主页文章添加边框阴影效果">主页文章添加边框阴影效果</span></h5><p>打开 <code>themes/*/source/css/_custom/custom.styl</code> ,向里面加代码:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs css">// 主页文章添加阴影效果<br><span class="hljs-selector-class">.post</span> &#123;<br>   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0px</span>;<br>   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">60px</span>;<br>   <span class="hljs-attribute">padding</span>: <span class="hljs-number">25px</span>;<br>   -webkit-<span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">202</span>, <span class="hljs-number">203</span>, <span class="hljs-number">203</span>, .<span class="hljs-number">5</span>);<br>   -moz-<span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">202</span>, <span class="hljs-number">203</span>, <span class="hljs-number">204</span>, .<span class="hljs-number">5</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5><span id="显示当前浏览进度">显示当前浏览进度</span></h5><p>修改<code>themes/*/_config.yml</code>，把 <code>false</code> 改为 <code>true</code>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Back to top in sidebar</span><br><span class="hljs-attr">b2t:</span> <span class="hljs-literal">true</span><br><br><span class="hljs-comment"># Scroll percent label in b2t button</span><br><span class="hljs-attr">scrollpercent:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+
+<h5><span id="创建分类页">创建分类页</span></h5><p>在终端窗口下，定位到 <code>Hexo</code> 站点目录下，新建：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">cd</span> &lt;站点目录&gt;</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">hexo new page categories</span><br></code></pre></td></tr></table></figure>
+
+<h5><span id="加入-广告">加入 广告</span></h5><p>主要有两种：<a target="_blank" rel="noopener" href="https://ssp.baidu.com/static/register.html" title="https://ssp.baidu.com/static/register.html">百度SSP</a>和<a target="_blank" rel="noopener" href="https://www.google.com/adsense/start/#/?modal_active=none" title="https://www.google.com/adsense/start/#/?modal_active=none">谷歌Adsense</a>。方法类似：</p>
+<ol>
+<li><p>注册，复制广告代码</p>
+</li>
+<li><p>部署到网站。</p>
+<p>2.1. 新建 <code>theme/*/layout/_custom/google_ad.swig</code>，将 AdSense 上的代码粘贴进去</p>
+<p>2.2. 头部。在 <code>theme/*/layout/_custom/head.swig</code> 中也粘贴一份</p>
+<p>2.3. 每篇博客。在 <code>theme/*/layout/post.swig</code> 里中在希望看到的地方加上：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php">&#123;% <span class="hljs-keyword">include</span> <span class="hljs-string">&#x27;_custom/google_ad.swig&#x27;</span> %&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>例如：在 <code>&lt;div id=&quot;posts&quot; class=&quot;posts-expand&quot;&gt; &lt;/div&gt;</code> 中间插入，总代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">&#123;% block content %&#125;<br>  &lt;div <span class="hljs-built_in">id</span>=<span class="hljs-string">&quot;posts&quot;</span> class=<span class="hljs-string">&quot;posts-expand&quot;</span>&gt;<br>    &#123;&#123; post_template.render(page) &#125;&#125;<br>    &#123;% include <span class="hljs-string">&#x27;_custom/google_ad.swig&#x27;</span> %&#125;<br>  &lt;/div&gt;<br>&#123;% endblock %&#125;<br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>等待审核通过。如果失败，可再次申请。</p>
+</li>
+</ol>
+<h5><span id="添加萌萌哒">添加萌萌哒</span></h5><ol>
+<li><p>安装插件</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css">npm install <span class="hljs-attr">--save</span> hexo-helper-live2d<br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>复制你喜欢的模型名字：</p>
+<p>Epsilon2.1</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d95beefee24~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>Gantzert_Felixander</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d95b1115d1f~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>haru</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d95af5e3539~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>miku</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d9593c85eba~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>ni-j</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d957bf38a1c~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>nico</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d9577ac56dc~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>nietzche</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d9557c80451~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>nipsilon</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d953d3e556c~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>nito</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d94fcbbdf9b~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>shizuku</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d94fbfdd253~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>tsumiki</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d94b21640ad~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>wanko</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d94a3086fbf~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>z16</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d944d195e64~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>hibiki</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d93b7a7edd3~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>koharu</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d940eca4201~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>haruto</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d93fc85182f~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>Unitychan</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d93f63905c8~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>tororo</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d93efd7a55c~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+<p>hijiki</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d93f55c4595~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+</li>
+<li><p>将以下代码添加到主题配置文件<code>_config.yml</code>，修改&lt;你喜欢的模型名字&gt;：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">live2d:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">scriptFrom:</span> <span class="hljs-string">local</span><br>  <span class="hljs-attr">pluginRootPath:</span> <span class="hljs-string">live2dw/</span><br>  <span class="hljs-attr">pluginJsPath:</span> <span class="hljs-string">lib/</span><br>  <span class="hljs-attr">pluginModelPath:</span> <span class="hljs-string">assets/</span><br>  <span class="hljs-attr">tagMode:</span> <span class="hljs-literal">false</span><br>  <span class="hljs-attr">log:</span> <span class="hljs-literal">false</span><br>  <span class="hljs-attr">model:</span><br>    <span class="hljs-attr">use:</span> <span class="hljs-string">live2d-widget-model-&lt;你喜欢的模型名字&gt;</span><br>  <span class="hljs-attr">display:</span><br>    <span class="hljs-attr">position:</span> <span class="hljs-string">right</span><br>    <span class="hljs-attr">width:</span> <span class="hljs-number">150</span><br>    <span class="hljs-attr">height:</span> <span class="hljs-number">300</span><br>  <span class="hljs-attr">mobile:</span><br>    <span class="hljs-attr">show:</span> <span class="hljs-literal">true</span><br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>建配置文件</p>
+<p>4.1. 在站点目录下建文件夹<code>live2d_models</code>，</p>
+<p>4.2. 再在<code>live2d_models</code>下建文件夹<code>&lt;你喜欢的模型名字&gt;</code>,</p>
+<p>4.3. 再在<code>&lt;你喜欢的模型名字&gt;</code>下建json文件：&lt;你喜欢的模型名字&gt;.model.json</p>
+</li>
+<li><p>安装模型。在命令行（即Git Bash）运行以下命令即可：</p>
+<blockquote>
+<p>npm install –save live2d-widget-model-&lt;你喜欢的模型名字&gt;</p>
+</blockquote>
+</li>
+<li><p>在命令行（即Git Bash）运行以下命令， 在<code>http://127.0.0.1:4000/</code>查看测试结果:</p>
+<blockquote>
+<p>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</p>
+</blockquote>
+</li>
+</ol>
+<h3><span id="插件配置">插件配置</span></h3><p>以下插件（评论系统、数据统计与分析、内容分享服务、搜索服务）各选一个即可。</p>
+<h4><span id="评论系统">评论系统</span></h4><table>
+<thead>
+<tr>
+<th></th>
+<th>推荐指数</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://valine.js.org/" title="https://valine.js.org/">Valine</a></td>
+<td>4</td>
+<td>每天30000条评论，10GB的储存</td>
+<td>作者评论无标识</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://livere.com/" title="https://livere.com/">来必力&#x2F;livere</a></td>
+<td>4</td>
+<td>多种账号登录</td>
+<td>评论无法导出</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://changyan.kuaizhan.com/" title="http://changyan.kuaizhan.com/">畅言</a></td>
+<td>3</td>
+<td>美观</td>
+<td>必须备案域名</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/imsun/gitment" title="https://github.com/imsun/gitment">gitment</a></td>
+<td>3</td>
+<td>简洁</td>
+<td>只能登陆github评论</td>
+</tr>
+<tr>
+<td>Disqus</td>
+<td>1</td>
+<td></td>
+<td>需要翻*墙</td>
+</tr>
+</tbody></table>
+<h5><span id="valine">Valine</span></h5><p>1.1. 获取APP ID 和 APP Key</p>
+<p>请先登录或注册 <a target="_blank" rel="noopener" href="https://leancloud.cn/" title="https://leancloud.cn/">LeanCloud</a>, 进入控制台后点击左下角创建应用，</p>
+<p>进入刚刚创建的应用，选择左下角的<code>设置</code>&gt;<code>应用Key</code>，然后就能看到你的<code>APP ID</code>和<code>APP Key</code>了。</p>
+<p>1.2. 填写APP ID 和 APP Key到主题配置文件<code>_config.yml</code></p>
+<p>1.3. 运行<code>hexo g&amp;&amp;hexo d</code>推送到博客。</p>
+<h5><span id="来必力x2flivere">来必力&#x2F;livere</span></h5><p>2.1. 登陆 <a target="_blank" rel="noopener" href="https://livere.com/" title="https://livere.com/">来必力</a> 获取你的 LiveRe UID。</p>
+<p>2.2. 填写LiveRe UID到主题配置文件<code>_config.yml</code></p>
+<h5><span id="畅言">畅言</span></h5><p>3.1.获取APP ID 和 APP Key</p>
+<p>请先登录或注册 <a target="_blank" rel="noopener" href="http://changyan.kuaizhan.com/" title="http://changyan.kuaizhan.com/">畅言</a>, 点击“立即免费获取畅言”，</p>
+<p>新建站点，点击管理，点击评论插件&gt;评论管理，</p>
+<p>点击后台总览，然后就能看到你的<code>APP ID</code>和<code>APP Key</code>了。</p>
+<p>3.2. 填写APP ID 和 APP Key到主题配置文件<code>_config.yml</code></p>
+<p>3.3. 运行<code>hexo g&amp;&amp;hexo d</code>推送到博客。</p>
+<h5><span id="gitment">gitment</span></h5><p>4.1. 安装插件：</p>
+<blockquote>
+<p>npm i –save gitment</p>
+</blockquote>
+<p>4.2. 申请应用</p>
+<p>在<a target="_blank" rel="noopener" href="https://github.com/settings/applications/new" title="https://github.com/settings/applications/new">New OAuth App</a>为你的博客应用一个密钥:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql">Application name:随便写<br>Homepage URL:这个也可以随意写,就写你的博客地址就行<br>Application description:描述,也可以随意写<br><span class="hljs-keyword">Authorization</span> callback URL:这个必须写你的博客地址<br><br></code></pre></td></tr></table></figure>
+
+<p>4.3. 配置</p>
+<p>编辑主题配置文件<code>themes/*/_config.yml</code>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Gitment</span><br><span class="hljs-comment"># Introduction: https://imsun.net/posts/gitment-introduction/</span><br><span class="hljs-attr">gitment:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">mint:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway</span><br>  <span class="hljs-attr">count:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># Show comments count in post meta area</span><br>  <span class="hljs-attr">lazy:</span> <span class="hljs-literal">false</span> <span class="hljs-comment"># Comments lazy loading with a button</span><br>  <span class="hljs-attr">cleanly:</span> <span class="hljs-literal">false</span> <span class="hljs-comment"># Hide &#x27;Powered by ...&#x27; on footer, and more</span><br>  <span class="hljs-attr">language:</span> <span class="hljs-comment"># Force language, or auto switch by theme</span><br>  <span class="hljs-attr">github_user:</span> &#123;<span class="hljs-string">you</span> <span class="hljs-string">github</span> <span class="hljs-string">user</span> <span class="hljs-string">id</span>&#125;<br>  <span class="hljs-attr">github_repo:</span> <span class="hljs-string">公开的git仓库,评论会作为那个项目的issue</span><br>  <span class="hljs-attr">client_id:</span> &#123;<span class="hljs-string">刚才申请的ClientID</span>&#125;<br>  <span class="hljs-attr">client_secret:</span> &#123;<span class="hljs-string">刚才申请的Client</span> <span class="hljs-string">Secret</span>&#125;<br>  <span class="hljs-attr">proxy_gateway:</span> <span class="hljs-comment"># Address of api proxy, See: https://github.com/aimingoo/intersect</span><br>  <span class="hljs-attr">redirect_protocol:</span> <span class="hljs-comment"># Protocol of redirect_uri with force_redirect_pro</span><br><br></code></pre></td></tr></table></figure>
+
+<h5><span id="disqus">Disqus</span></h5><p>编辑 主题配置文件<code>themes/*/_config.yml</code>， 将 disqus 下的 enable 设定为 true，同时提供您的 shortname。count 用于指定是否显示评论数量。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">disqus:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">false</span><br>  <span class="hljs-attr">shortname:</span><br>  <span class="hljs-attr">count:</span> <span class="hljs-literal">true</span><br><br></code></pre></td></tr></table></figure>
+
+<h4><span id="数据统计与分析">数据统计与分析</span></h4><table>
+<thead>
+<tr>
+<th></th>
+<th>推荐指数</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="http://ibruce.info/2015/04/04/busuanzi/" title="http://ibruce.info/2015/04/04/busuanzi/">不蒜子</a></td>
+<td>4</td>
+<td>可直接将访问次数显示在您在网页上（也可不显示）</td>
+<td>只计数</td>
+</tr>
+<tr>
+<td>百度统计</td>
+<td>3</td>
+<td></td>
+<td>收录慢</td>
+</tr>
+</tbody></table>
+<h5><span id="不蒜子">不蒜子</span></h5><p>编辑 主题配置文件 <code>themes/*/_config.yml</code>中的<code>busuanzi_count</code>的配置项即可。</p>
+<ul>
+<li>当<code>enable: true</code>时，代表开启全局开关。</li>
+<li>若<code>site_uv</code>（本站访客数）、<code>site_pv</code>（本站访客数）、<code>page_pv</code>（本文总阅读量）的值均为<code>false</code>时，不蒜子仅作记录而不会在页面上显示。</li>
+</ul>
+<p>注意：</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vbnet">不蒜子官方因七牛强制过期原有的『dn-lbstatics.qbox.<span class="hljs-keyword">me</span>』域名（预计<span class="hljs-number">2018</span>年<span class="hljs-number">10</span>月初），与客服沟通数次无果，即使我提出为此付费也不行，只能更换域名到『busuanzi.ibruce.info』！<br><br></code></pre></td></tr></table></figure>
+
+<p>解决办法：</p>
+<ol>
+<li><p>找到主题调用不蒜子的swig文件。一般在”\themes*\layout_third-party\analytics\busuanzi-counter.swig”</p>
+</li>
+<li><p>更改域名</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml">把原有的：<br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>域名改一下即可：<br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br></code></pre></td></tr></table></figure></li>
+</ol>
+<h5><span id="百度统计">百度统计</span></h5><ol>
+<li><p>登录 <a target="_blank" rel="noopener" href="http://tongji.baidu.com/" title="http://tongji.baidu.com/">百度统计</a>，定位到站点的代码获取页面</p>
+</li>
+<li><p>复制统计脚本 id，如图： ​</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/11/14/16711d92ce3142f4~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.image" alt="img" class="lazyload"></p>
+</li>
+<li><p>编辑 主题配置文件<code>themes/*/_config.yml</code>，修改字段 <code>google_analytics</code>，值设置成你的统计脚本 id。</p>
+</li>
+</ol>
+<h4><span id="内容分享服务">内容分享服务</span></h4><table>
+<thead>
+<tr>
+<th></th>
+<th>推荐指数</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="http://share.baidu.com/" title="http://share.baidu.com/">百度分享</a></td>
+<td>4</td>
+<td>稳定</td>
+<td>不太美观</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/revir/need-more-share2" title="https://github.com/revir/need-more-share2">need-more-share2</a></td>
+<td>4</td>
+<td>美观</td>
+<td>更新不及时（比如微信分享API）</td>
+</tr>
+</tbody></table>
+<h5><span id="百度分享">百度分享</span></h5><p>编辑 主题配置文件，添加&#x2F;修改字段 <code>baidushare</code>，值为 <code>true</code>即可。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 百度分享服务</span><br><span class="hljs-attr">baidushare:</span> <span class="hljs-literal">true</span><br><br></code></pre></td></tr></table></figure>
+
+<h5><span id="need-more-share2">need-more-share2</span></h5><p>编辑 主题配置文件，添加&#x2F;修改字段 <code>needmoreshare2</code>，值为 <code>true</code>即可。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">needmoreshare2:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br><br></code></pre></td></tr></table></figure>
+
+<h4><span id="搜索服务">搜索服务</span></h4><table>
+<thead>
+<tr>
+<th></th>
+<th>推荐指数</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Local Search</td>
+<td>4</td>
+<td>配置方便</td>
+<td></td>
+</tr>
+<tr>
+<td>Swiftype</td>
+<td>2</td>
+<td></td>
+<td>需注册</td>
+</tr>
+<tr>
+<td>Algolia</td>
+<td>2</td>
+<td></td>
+<td>需注册</td>
+</tr>
+</tbody></table>
+<h5><span id="local-search">Local Search</span></h5><p>添加百度&#x2F;谷歌&#x2F;本地 自定义站点内容搜索</p>
+<ol>
+<li><p>安装 <code>hexo-generator-searchdb</code>，在站点的根目录下执行以下命令：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css">$ npm install hexo-generator-searchdb <span class="hljs-attr">--save</span><br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>编辑 站点配置文件，新增以下内容到任意位置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">search:</span><br>  <span class="hljs-attr">path:</span> <span class="hljs-string">search.xml</span><br>  <span class="hljs-attr">field:</span> <span class="hljs-string">post</span><br>  <span class="hljs-attr">format:</span> <span class="hljs-string">html</span><br>  <span class="hljs-attr">limit:</span> <span class="hljs-number">10000</span><br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>编辑 主题配置文件，启用本地搜索功能：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># Local search</span><br><span class="hljs-attr">local_search:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br><br></code></pre></td></tr></table></figure></li>
+</ol>
+<h3><span id="错误分析">错误分析</span></h3><p>如果你使用Hexo遇到同样的问题,这里有一些常见问题的解决方案。</p>
+<h4><span id="yaml-parsing-error">YAML Parsing Error</span></h4><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs arduino">JS-YAML: incomplete <span class="hljs-keyword">explicit</span> mapping pair; a key node is missed at line <span class="hljs-number">18</span>, column <span class="hljs-number">29</span>:<br>      last_updated: Last updated: %s<br><br></code></pre></td></tr></table></figure>
+
+<ol>
+<li>参数中包含冒号，请用加引号，如<code>Last updated: %s</code></li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">JS-YAML:</span> <span class="hljs-string">bad</span> <span class="hljs-string">indentation</span> <span class="hljs-string">of</span> <span class="hljs-string">a</span> <span class="hljs-string">mapping</span> <span class="hljs-string">entry</span> <span class="hljs-string">at</span> <span class="hljs-string">line</span> <span class="hljs-number">18</span><span class="hljs-string">,</span> <span class="hljs-attr">column 31:</span><br>      <span class="hljs-string">last_updated：&quot;Last</span> <span class="hljs-attr">updated:</span> <span class="hljs-string">%s&quot;</span><br><br></code></pre></td></tr></table></figure>
+
+<ol>
+<li>字段后面的冒号必须为<strong>英文冒号</strong>，如：last_updated:</li>
+<li>字段冒号后面必须跟一个空格，如：last_updated: “Last updated: %s”</li>
+</ol>
+<h4><span id="emfile-error">EMFILE Error</span></h4><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs arduino">Error: EMFILE, too many open files<br><br></code></pre></td></tr></table></figure>
+
+<p>生成大量的文件时，可能遇到EMFILE错误。</p>
+<p>可以运行以下命令来增加允许同步I &#x2F; O操作的数量。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">ulimit</span> -n 10000</span><br><br></code></pre></td></tr></table></figure>
+
+<h4><span id="process-out-of-memory">Process Out of Memory</span></h4><p>当<code>hexo g</code>时，遇到以下错误：</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs objectivec">FATAL ERROR: <span class="hljs-built_in">CALL_AND_RETRY_LAST</span> Allocation failed - process <span class="hljs-keyword">out</span> of memory<br><br></code></pre></td></tr></table></figure>
+
+<p>如下，更改<code>hexo-cli</code>文件的第一行，来增大nodejs堆内存.该bug已在<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/1735" title="https://github.com/hexojs/hexo/issues/1735">新版本</a>修复。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-meta">#!/usr/bin/env node --max_old_space_size=8192</span><br><br></code></pre></td></tr></table></figure>
+
+<h4><span id="git-deployment-problems">Git Deployment Problems</span></h4><ol>
+<li>RPC failed</li>
+</ol>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vbnet"><span class="hljs-symbol">error:</span> RPC failed; result=<span class="hljs-number">22</span>, HTTP code = <span class="hljs-number">403</span><br><br><span class="hljs-symbol">fatal:</span> <span class="hljs-comment">&#x27;username.github.io&#x27; does not appear to be a git repository</span><br><br></code></pre></td></tr></table></figure>
+
+<p>确保你有你的电脑上设置git正确或尝试使用HTTPS存储库URL。</p>
+<ol>
+<li>Error: ENOENT: no such file or directory</li>
+</ol>
+<p>这个需要有一定的git的知识，因为可能是由于写错了标签,类别,或文件名，导致本地和github冲突了，Git不能自动合并这一变化所以它打破了自动分支。</p>
+<p>解决办法：</p>
+<ol>
+<li>检查文章的标签和类别,确保本地和github上是相同的。</li>
+<li>合并分支（Commit）。</li>
+<li>清除，重构。在站点目录下，命令行（即Git Bash）运行<code>hexo clean</code>和<code>hexo g</code></li>
+<li>手动将站点目录下的<code>public</code>文件夹复制到您的桌面</li>
+<li>从你的master分支切换到部署在本地分支。</li>
+<li>从桌面复制<code>public</code>文件夹到本地分支。</li>
+<li>合并分支到github（Commit）。</li>
+<li>切回master分支。</li>
+</ol>
+<h4><span id="server-problems">Server Problems</span></h4><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs arduino">Error: listen EADDRINUSE<br><br></code></pre></td></tr></table></figure>
+
+<p>你可能使用相同的端口，同时开启了两个Hexo服务器。如果需要同时开启，可以尝试修改端口设置：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css">$ hexo server -<span class="hljs-selector-tag">p</span> <span class="hljs-number">5000</span><br><br></code></pre></td></tr></table></figure>
+
+<h4><span id="plugin-installation-problems">Plugin Installation Problems</span></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs auto">npm ERR! node-waf configure build<br><br></code></pre></td></tr></table></figure>
+
+<p>这个错误可能发生在试图安装一个用Cc++或另一个javascript语言编写的插件。确保您已经安装了正确的编译器在您的计算机上。</p>
+<h4><span id="error-with-dtrace-mac-os-x">Error with DTrace (Mac OS X)</span></h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs css">&#123; <span class="hljs-selector-attr">[Error: Cannot find module <span class="hljs-string">&#x27;./build/Release/DTraceProviderBindings&#x27;</span>]</span> <span class="hljs-selector-tag">code</span>: <span class="hljs-string">&#x27;MODULE_NOT_FOUND&#x27;</span> &#125;<br>&#123; <span class="hljs-selector-attr">[Error: Cannot find module <span class="hljs-string">&#x27;./build/default/DTraceProviderBindings&#x27;</span>]</span> <span class="hljs-selector-tag">code</span>: <span class="hljs-string">&#x27;MODULE_NOT_FOUND&#x27;</span> &#125;<br>&#123; <span class="hljs-selector-attr">[Error: Cannot find module <span class="hljs-string">&#x27;./build/Debug/DTraceProviderBindings&#x27;</span>]</span> <span class="hljs-selector-tag">code</span>: <span class="hljs-string">&#x27;MODULE_NOT_FOUND&#x27;</span> &#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>DTrace安装可能有问题，重装:</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs arduino">$ npm install hexo --no-optional<br><br></code></pre></td></tr></table></figure>
+
+<p>详见 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796" title="https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796">#1326</a></p>
+<h4><span id="iterate-data-model-on-jade-or-swig">Iterate Data Model on Jade or Swig</span></h4><p>Hexo使用仓库的数据模型。这不是一个数组,所以你可能需要将对象转换为iterable。</p>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs erlang">&#123;<span class="hljs-comment">% for post in site.posts.toArray() %&#125;</span><br>&#123;<span class="hljs-comment">% endfor %&#125;</span><br><br></code></pre></td></tr></table></figure>
+
+<h4><span id="data-not-updated">Data Not Updated</span></h4><p>一些数据不能更新或新生成的文件的最后一个版本完全相同。清理缓存，再试一次：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>hexo clean<br><br></code></pre></td></tr></table></figure>
+
+<h4><span id="no-command-is-executed">No command is executed</span></h4><p>那个不能使用除<code>help</code>、<code>init</code>和<code>version</code>以外的命令行（即Git Bash）时, 有可能时站点目录下的 <code>package.json</code>文件，缺少<code>hexo</code> ，如下:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;hexo&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;version&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;3.2.2&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br><br></code></pre></td></tr></table></figure>
+
+<h4><span id="escape-contents">Escape Contents</span></h4><p>Hexo使用Nunjucks渲染的页面. <code>&#123; &#123; &#125; &#125;</code>或<code>&#123; % % &#125;</code>将解析和可能会引起麻烦， 如果要在博文中出现，必须使用三引号：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs go">​<span class="hljs-string">``</span><span class="hljs-string">`</span><br><span class="hljs-string">&#123;% raw %&#125;</span><br><span class="hljs-string">Hello &#123;&#123; sensitive &#125;&#125;</span><br><span class="hljs-string">&#123;% endraw %&#125;</span><br><span class="hljs-string">​`</span><span class="hljs-string">``</span><br><br></code></pre></td></tr></table></figure>
+
+<h4><span id="enospc-error-linux">ENOSPC Error (Linux)</span></h4><p>如果运行命令<code>$ hexo server</code> 返回一个错误:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Error</span>: watch <span class="hljs-variable constant_">ENOSPC</span> ...<br><br></code></pre></td></tr></table></figure>
+
+<p>可以通过运行<code>$ npm dedupe</code>或者以下命令行（即Git Bash）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">echo</span> fs.inotify.max_user_watches=524288 | sudo <span class="hljs-built_in">tee</span> -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p</span><br><br></code></pre></td></tr></table></figure>
+
+<p>来增加测试时，你可以看见的文件数量。</p>
+<h4><span id="emperm-error-windows-subsystem-for-linux">EMPERM Error (Windows Subsystem for Linux)</span></h4><p>如果在Windows Subsystem for Linux，运行命令<code>$ hexo server</code> 返回这个错误:</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vbnet"><span class="hljs-symbol">Error:</span> watch /path/<span class="hljs-keyword">to</span>/hexo/theme/ EMPERM<br><br></code></pre></td></tr></table></figure>
+
+<p>因为目前在Windows Subsystem for Linux中，有些内容更改时，还不能实时更新到hexo服务器。</p>
+<p>所以需要重新编译，再启动服务器：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>hexo generate<br><span class="hljs-variable">$ </span>hexo server -s<br><br></code></pre></td></tr></table></figure>
+
+<h4><span id="template-render-error">Template render error</span></h4><p>有时运行命令<code>$ hexo generate</code> 返回一个错误:</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs vbnet">FATAL Something<span class="hljs-comment">&#x27;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br>Template render <span class="hljs-keyword">error</span>: (unknown path)<br><br></code></pre></td></tr></table></figure>
+
+<p>这意味着有些认不出来单词在你的文件，并且很可能在你的新博文,或者配置文件<code>_config.yml</code>中，比如缩进错误：</p>
+<p>错误例子：</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs makefile"><span class="hljs-section">plugins:</span><br>hexo-generator-feed<br>hexo-generator-sitemap<br><br></code></pre></td></tr></table></figure>
+
+<h3><span id="常用操作">常用操作</span></h3><h4><span id="创建文章">创建文章</span></h4><p>命令：</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs arduino">$ hexo <span class="hljs-keyword">new</span> [layout] &lt;title&gt;<br><br></code></pre></td></tr></table></figure>
+
+<p>参数说明：</p>
+<ul>
+<li>[layout]可以为以下三种：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>功能</th>
+<th>文章路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>post</td>
+<td>新建博文</td>
+<td>source&#x2F;_posts</td>
+</tr>
+<tr>
+<td>page</td>
+<td>新建页面（如404，分类）</td>
+<td>source</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>草稿</td>
+<td>source&#x2F;_drafts</td>
+</tr>
+</tbody></table>
+<p>草稿可通过一下命令发布：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css">$ hexo publish <span class="hljs-selector-attr">[layout]</span> &lt;title&gt;<br><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>title注意：</p>
+<p>不是博文标题，</p>
+<p>是博文markdown文件的名字，</p>
+<p>也是博文链接的后缀（如<code>https://www.simon96.online/2018/10/12/hexo-tutorial/</code>中的hexo-tutorial）</p>
+</li>
+</ul>
+<h4><span id="文章模版">文章模版</span></h4><ul>
+<li><p>创建模版</p>
+<p>在新建文章时，Hexo 会根据 <code>scaffolds</code> 文件夹内相对应的文件来建立文件，例如：</p>
+</li>
+</ul>
+<blockquote>
+<p>$ hexo new blog “simon”</p>
+</blockquote>
+<p>​ 在执行这行指令时，Hexo 会尝试在 <code>scaffolds</code> 文件夹中寻找 <code>blog.md</code>，并根据其内容建立文章。</p>
+<ul>
+<li><p>修改参数</p>
+<p>以下是您可以在模版中使用的变量：</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>layout</td>
+<td>布局</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件建立日期</td>
+</tr>
+</tbody></table>
+<h4><span id="front-matter">Front-matter</span></h4><p>就是博文最上方以 <code>---</code> 分隔的那部分。</p>
+<p>默认可以使用的Front-matter：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>layout</code></td>
+<td>布局</td>
+<td></td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>标题</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>建立日期</td>
+<td>文件建立日期</td>
+</tr>
+<tr>
+<td><code>updated</code></td>
+<td>更新日期</td>
+<td>文件更新日期</td>
+</tr>
+<tr>
+<td><code>comments</code></td>
+<td>开启文章的评论功能</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>标签（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td><code>categories</code></td>
+<td>分类（不适用于分页）</td>
+<td></td>
+</tr>
+<tr>
+<td><code>permalink</code></td>
+<td>覆盖文章网址</td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h3><span id="感谢支持">感谢支持</span></h3>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>Author：</strong>John Doe<br>
+        <strong>Link：</strong><a href="http://example.com/2023/03/15/first-article/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;03&#x2F;15&#x2F;first-article&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;03&#x2F;15&#x2F;first-article&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+	</div>
+	
+	<div class="kira-post-footer">
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		var gitalk = new Gitalk({
+			clientID: '-id-',
+			clientSecret: '-key-',
+			id: '最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析',
+			repo: '-issue repo name-',
+			owner: '-your github username-',
+			admin: '-your github username-',
+			title: '',
+		});
+		gitalk.render('gitalk');
+	</script>
+
+</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
