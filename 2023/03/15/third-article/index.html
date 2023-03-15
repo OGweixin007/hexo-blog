@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
+
+		
+		<title> 一文读懂 ChatGPT API 接入指南 -  Hexo-blog | OGweixin_007</title>
+		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+		<!-- lazyload -->
+		<script src="https://unpkg.com/lazysizes@5.1.0/lazysizes.min.js"></script>
+		<!-- smooth-scrolling -->
+		<script src="https://unpkg.com/smooth-scrolling.js@latest"></script>
+		<!-- highlight -->
+		<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark.min.css" />
+		<script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+		<!-- 预置 kiraicon -->
+		<link rel="stylesheet" href="/lib/iconfont/iconfont.css" crossorigin />
+		
+			<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3299330_2a7ov96q7e3.css" crossorigin />
+		
+		<link rel="stylesheet" href="/lib/iconfont/iconfont.css" crossorigin />
+		<link
+			rel="shortcut icon"
+			href="https://panjiachen.github.io/vue-element-admin-site/favicon.ico"
+			type="image/png"
+		/>
+		<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+		
+			
+		<link rel="stylesheet" href="/style.css" />
+			
+		<link rel="stylesheet" href="/custom.css" />
+			
+		
+		<script src="/deps/js/APlayer.min.js"></script>
+		<script src="/deps/js/Meting.min.js"></script>
+	<meta name="generator" content="Hexo 6.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://w.wallhaven.cc/full/p9/wallhaven-p9op59.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Hexo-blog | OGweixin_007">
+        <img
+			src="https://p3-passport.byteimg.com/img/user-avatar/8f0b681a50ca4cd68611282e297d6edf~190x190.awebp"
+			alt="tcl"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://p3-passport.byteimg.com/img/user-avatar/8f0b681a50ca4cd68611282e297d6edf~190x190.awebp" title="tcl">
+			<img
+				src="https://p3-passport.byteimg.com/img/user-avatar/8f0b681a50ca4cd68611282e297d6edf~190x190.awebp"
+				alt="tcl"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>4</div>
+		<div><span>标签</span>2</div>
+		<div><span>分类</span>0</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont icon-home"
+			></i>
+			<div class="kira-list-item-content">回到首页</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont icon-container"
+			></i>
+			<div class="kira-list-item-content">文章归档</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont icon-user"
+			></i>
+			<div class="kira-list-item-content">关于本人</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont icon-team"
+			></i>
+			<div class="kira-list-item-content">我的朋友</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		 <div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		<a
+			class="mdui-ripple"
+			href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1113814294&website=www.oicqzone.com"
+			target="_blank"
+			mdui-tooltip="{content: 'QQ'}"
+			style="
+				color: rgb(49, 174, 255);
+				background-color: rgba(49, 174, 255, .1);
+			"
+		>
+			<i
+				class="kirafont icon-QQ"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/274276224"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .15);
+			"
+		>
+			<i
+				class="kirafont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/ogweixin007"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .15);
+			"
+		>
+			<i
+				class="kirafont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://gitee.com/ogweixin_007"
+			target="_blank"
+			mdui-tooltip="{content: 'Gitee'}"
+			style="
+				color: rgb(165, 15, 15);
+				background-color: rgba(165, 15, 15, .15);
+			"
+		>
+			<i
+				class="kirafont icon-gitee"
+			></i> </a
+		>
+	</div>
+</div>
+    
+<div class="kira-widget-wrap">
+	<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow"><a href="/tags/Chat-GPT/" style="font-size: 10px;">Chat-GPT</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a></div>
+	
+</div>
+
+ 
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2023
+		<a href="/">tcl</a
+		>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<!-- TODO: github 链接 -->
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div class="kira-sidebar-modal" id="sidebar-modal" onclick="(function(self) {
+	self.classList.remove('show');
+	document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+})(this)"></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+<script src="/js/kira-image.js"></script>
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="kira-post">
+	<article>
+		
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
+			<img
+				data-src="https://w.wallhaven.cc/full/p9/wallhaven-p9op59.jpg"
+				data-sizes="auto"
+				alt="一文读懂 ChatGPT API 接入指南"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>一文读懂 ChatGPT API 接入指南</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2023年03月15日</a>
+			<a><i class="kirafont icon-areachart"></i>1.2k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 5 分钟</a>
+		</div>
+		<p><strong>开启掘金成长之旅！这是我参与「掘金日新计划 · 2 月更文挑战」的第 2 天，<a target="_blank" rel="noopener" href="https://juejin.cn/post/7194721470063312933" title="https://juejin.cn/post/7194721470063312933">点击查看活动详情</a></strong></p>
+<p>最近 ChatGPT 突然爆火。抱着好奇的心态我也去官网注册账号体验了一下，因为网站人数太多，一时半会竟然注册不了，不过最终还是成功注册了。还没注册的朋友们可以参考一下这篇教程 <a target="_blank" rel="noopener" href="https://juejin.cn/post/7173447848292253704" title="https://juejin.cn/post/7173447848292253704">OpenAI 推出超神 ChatGPT 注册攻略来了</a>。写的很详细，我就不再说明了。</p>
+<p>在我和 ChatGPT 聊了十几分钟之后，这个东西令我大为震惊，虽然它有些地方显得笨笨的，带点机器人的味道，但是丝毫不影响我对它的喜爱。感叹之余我思考了一下，能不能将它接入到我们现有的应用中。于是我仔细浏览了一下 OpenAI 官网，果然已经提供了比较多的接口供我们使用。</p>
+<h2><span id="准备工作">准备工作</span></h2><p>ChatGPT API 接入需要如下条件。</p>
+<ol>
+<li>已成功注册 OpenAI 的账号。</li>
+<li>创建 API KEY，这个 API KEY 是用于 HTTP 请求身份验证的，可以创建多个。如下图点击“Create new secret key“，注意这个创建之后需要马上复制好保存，关闭弹框之后就看不到了。</li>
+</ol>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/420940bc2ddd402eb339eaadfcb13a62~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp" alt="image.png" class="lazyload"></p>
+<ol start="3">
+<li>官方 API 文档链接 <a target="_blank" rel="noopener" href="https://platform.openai.com/docs/api-reference/" title="https://platform.openai.com/docs/api-reference/">api-reference</a>。</li>
+<li>注意 API 调用是收费的，但是 OpenAI 已经为我们免费提供了18美元的用量，足够大家放心使用。</li>
+</ol>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e50e618bd2b4baf9cc42c76e65be58b~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp" alt="image.png" class="lazyload"></p>
+<h2><span id="补全接口示例">补全接口示例</span></h2><p>该接口功能较多，支持最常用的问答功能。</p>
+<ol>
+<li>请求方式，Post</li>
+<li>url，<a target="_blank" rel="noopener" href="https://api.openai.com/v1/completions" title="https://api.openai.com/v1/completions">api.openai.com&#x2F;v1&#x2F;completi…</a></li>
+<li>请求体 (json)。</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;model&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;text-davinci-003&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;prompt&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Say this is a test&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;max_tokens&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">7</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;temperature&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;top_p&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;n&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;stream&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>接口文档，<a target="_blank" rel="noopener" href="https://platform.openai.com/docs/api-reference/completions/create" title="https://platform.openai.com/docs/api-reference/completions/create">platform.openai.com&#x2F;docs&#x2F;api-re…</a></li>
+</ol>
+<h3><span id="请求参数解析">请求参数解析</span></h3><table>
+<thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>model</td>
+<td>可选参数。语言模型，这里选择的是<code>text-davinci-003</code></td>
+</tr>
+<tr>
+<td>prompt</td>
+<td>必选参数。即用户的输入。</td>
+</tr>
+<tr>
+<td>max_tokens</td>
+<td>可选参数，默认值为 16。最大分词数，会影响返回结果的长度。</td>
+</tr>
+<tr>
+<td>temperature</td>
+<td>可选参数，默认值为 1，取值 0-2。该值越大每次返回的结果越随机，即相似度越小。</td>
+</tr>
+<tr>
+<td>top_p</td>
+<td>可选参数，与<code>temperature</code>类似。</td>
+</tr>
+<tr>
+<td>n</td>
+<td>可选参数，默认值为 1。表示对每条<code>prompt</code>生成多少条结果。</td>
+</tr>
+<tr>
+<td>stream</td>
+<td>可选参数，默认值为<code>false</code>。表示是否回流部分结果。</td>
+</tr>
+</tbody></table>
+<h3><span id="请求示例">请求示例</span></h3><p>本文使用<code>OkHttp</code>作为网络请求框架，<code>Moshi</code>作为序列&#x2F;反序列化框架。编写单元测试对该接口进行请求，代码如下。</p>
+<ol>
+<li>OkHttp 的初始化。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-type">OkHttpClient</span> <span class="hljs-variable">okHttpClient</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">OkHttpClient</span>.Builder()<br>        .connectTimeout(<span class="hljs-number">10</span>, TimeUnit.SECONDS)<br>        .writeTimeout(<span class="hljs-number">10</span>, TimeUnit.SECONDS)<br>        .readTimeout(<span class="hljs-number">30</span>, TimeUnit.SECONDS)<br>        .callTimeout(<span class="hljs-number">60</span>, TimeUnit.SECONDS)<br>        .build();<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>请求实体类。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CompletionRequest</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">String</span> <span class="hljs-variable">model</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;text-davinci-003&quot;</span>;<br>    <span class="hljs-keyword">private</span> String prompt;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">Integer</span> <span class="hljs-variable">max_tokens</span> <span class="hljs-operator">=</span> <span class="hljs-number">256</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> <span class="hljs-variable">temperature</span> <span class="hljs-operator">=</span> <span class="hljs-number">0.5f</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">Integer</span> <span class="hljs-variable">top_p</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">Integer</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">Boolean</span> <span class="hljs-variable">stream</span> <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>;<br>    <span class="hljs-keyword">private</span> Boolean logprobs;<br>    <span class="hljs-keyword">private</span> String stop;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>请求方法。</li>
+</ol>
+<p>使用<code>OkHttp</code>发送请求。需注意所有的 Post 请求需要添加头字段<code>Authorization</code>，值为<code>Bearer YOUR_API_KEY</code>来验证身份。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">completion</span><span class="hljs-params">(String prompt)</span> <span class="hljs-keyword">throws</span> IOException &#123;<br>    <span class="hljs-type">CompletionRequest</span> <span class="hljs-variable">completionRequest</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">CompletionRequest</span>();<br>    completionRequest.setPrompt(prompt);<br><br>    <span class="hljs-type">String</span> <span class="hljs-variable">reqJson</span> <span class="hljs-operator">=</span> moshi.adapter(CompletionRequest.class).toJson(completionRequest);<br>    System.out.println(<span class="hljs-string">&quot;reqJson: &quot;</span> + reqJson);<br>    <span class="hljs-type">Request</span> <span class="hljs-variable">request</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Request</span>.Builder()<br>            .url(<span class="hljs-string">&quot;https://api.openai.com/v1/completions&quot;</span>)<br>            <span class="hljs-comment">// 将 API_KEY 替换成你自己的 API_KEY</span><br>            .header(<span class="hljs-string">&quot;Authorization&quot;</span>, <span class="hljs-string">&quot;Bearer &quot;</span> + API_KEY)<br>            .post(RequestBody.create(MEDIA_TYPE_JSON, reqJson))<br>            .build();<br><br>    <span class="hljs-keyword">try</span> (<span class="hljs-type">Response</span> <span class="hljs-variable">response</span> <span class="hljs-operator">=</span> okHttpClient.newCall(request).execute()) &#123;<br>        <span class="hljs-keyword">if</span> (!response.isSuccessful()) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">IOException</span>(<span class="hljs-string">&quot;Unexpected code &quot;</span> + response);<br>        System.out.println(response.body().string());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>在<code>completion()</code>测试方法中调用上面的<code>completion(String prompt)</code>方法</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">completion</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-keyword">try</span> &#123;<br>        chatGPT.completion(<span class="hljs-string">&quot;你能背诵多少位圆周率&quot;</span>);<br>    &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>        e.printStackTrace();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>查看请求结果</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;cmpl-6j9PhjAom9GyxBNCVacvckcVNKVZg&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;object&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;text_completion&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;created&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1676218965</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;model&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;text-davinci-003&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;choices&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;text&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;？\n\n我可以背诵50位圆周率：3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679。&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;index&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;logprobs&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">null</span></span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;finish_reason&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;stop&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;usage&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;prompt_tokens&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">21</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;completion_tokens&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">73</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;total_tokens&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">94</span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h2><span id="总结">总结</span></h2><p>通过上面一个例子，相信大家已经学会了如何将 ChatGPT API 接入到自己的应用了。OpenAI 还提供了其他有用的接口，这里就不一个一个说明了，大家可以前往官网自行查看文档。</p>
+<h2><span id="写在最后">写在最后</span></h2><p>如果你对我感兴趣，请移步到 <a target="_blank" rel="noopener" href="http://blogss.cn/" title="http://blogss.cn">blogss.cn</a> ，或关注公众号：<strong>程序员小北</strong>，进一步了解。</p>
+<ul>
+<li>如果本文帮助到了你，欢迎点赞和关注，这是我持续创作的动力 ❤️</li>
+<li>由于作者水平有限，文中如果有错误，欢迎在评论区指正 ✔️</li>
+<li>本文首发于掘金，未经许可禁止转载 ©️</li>
+</ul>
+
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>Author：</strong>tcl<br>
+        <strong>Link：</strong><a href="http://example.com/2023/03/15/third-article/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;03&#x2F;15&#x2F;third-article&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;03&#x2F;15&#x2F;third-article&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/Chat-GPT/" rel="tag">Chat-GPT</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		var gitalk = new Gitalk({
+			clientID: '-id-',
+			clientSecret: '-key-',
+			id: '一文读懂 ChatGPT API 接入指南',
+			repo: '-issue repo name-',
+			owner: '-your github username-',
+			admin: '-your github username-',
+			title: '',
+		});
+		gitalk.render('gitalk');
+	</script>
+
+</div>
+	
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
+</html>
